@@ -51,7 +51,8 @@ def handle(msg):
 
 TOKEN = '*'    # token del bot
 
-bot = telepot.Bot('TOKEN')
+bot = telepot.Bot('TOKEN')  # da tenere nascosto per evitare leak
+                            # eventualmente avvisat da GitGurdian
 MessageLoop(bot, handle).run_as_thread()
 print('Listening ...')
 
